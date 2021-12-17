@@ -82,7 +82,7 @@ h4 {
 
 .container {
   margin: 0 auto;
-  width: 1440px;
+  max-width: 1440px;
 }
 
 /*!-------------------------------------- section titles  */
@@ -124,7 +124,9 @@ h4 {
 /*!-------------------------------------- header  */
 
 .header {
+  display: flex;
   position: absolute;
+  width: 100%;
   left: 50%;
   transform: translate(-50%);
 }
@@ -134,6 +136,7 @@ h4 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-grow: 1;
 }
 
 .header-logo {
@@ -154,7 +157,8 @@ h4 {
 .header-links {
   display: flex;
   align-items: center;
-  margin: 20px 0;
+  margin: 20px 10px 20px 0;
+  
 }
 
 .navigation-list {
@@ -192,9 +196,18 @@ h4 {
 
 /*!--------------------------------------------- hero section  */
 
+.hero-section {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .hero-container {
   display: flex;
+  width: 100%;
   background-image: url(assets/img/hero-bg.jpg);
+  background-position: center center;
+  background-repeat: no-repeat; 
   height: 910px;
   margin-bottom: 100px;
 }
@@ -240,10 +253,14 @@ h4 {
 
 .skills-section {
   margin-bottom: 100px;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .skills-section-content {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin: 60px 20px 0px 20px;
 }
@@ -271,6 +288,9 @@ h4 {
 
 .portfolio-section {
   margin-bottom: 100px;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .button-block {
@@ -278,10 +298,13 @@ h4 {
   max-width: 895px;
   max-height: 55px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
 .button {
+  width: 220px;
+  max-height: 55px;
   padding: 8px 74px 7px 74px;
   font-family: var(--ff-text);
   font-weight: var(--fw-normal);
@@ -316,17 +339,13 @@ h4 {
 
 .video-section {
   margin-bottom: 100px;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .video {
-  width: 1400px;
-  height: 705px;
-}
-
-.play-button {
-  position: absolute;
-  margin-top: 280px;
-  margin-left: 620px;
+  width: 100%; 
 }
 
 .video-player {
@@ -338,10 +357,14 @@ h4 {
 
 .price-section {
   margin-bottom: 100px;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .price-section-content {
 display: flex;
+flex-wrap: wrap;
 justify-content: space-between;
 margin: 60px 20px 0 20px;
 }
@@ -400,9 +423,17 @@ box-sizing: border-box;
 
 /*!---------------------------------- contacts section  */
 
+.contacts-section {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .contacts-container {
   display: flex;
   background-image: url(assets/img/contacts-bg.jpg);
+  background-position: center center;
+  background-repeat: no-repeat; 
   height: 700px ;
 }
 
@@ -467,6 +498,12 @@ box-sizing: border-box;
 
 /*!------------------------------------------ footer  */
 
+.footer {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .footer-container {
   height: 150px;
   display: flex;
@@ -520,5 +557,46 @@ box-sizing: border-box;
 .socials-image:hover {
   cursor: pointer;
   filter: invert(82%) sepia(38%) saturate(286%) hue-rotate(6deg) brightness(81%) contrast(83%);
+}
+
+/*!-------------------------------- media queries  */
+
+@media (max-width: 1437px) {
+  /*portfolio photos  */
+  .photos {
+    justify-content: center;
+  }
+  /*price cards */
+  .price-section-content {
+    justify-content: center;
+    gap: 25px;
+  }
+
+}
+
+@media (max-width: 1320px) {
+
+  /*skills section */
+  .skills-section-content {
+    justify-content: center;
+  }
+
+  .skill-card {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 930px) {
+
+  /*portfolio buttons */
+  .button-block {
+    justify-content: center;
+    gap: 5px;
+  }
+
+  /*portfolio photos  */
+  .photos {
+    padding-top: 20px;
+  }
 }
 
