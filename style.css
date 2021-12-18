@@ -729,12 +729,26 @@ box-sizing: border-box;
   }
 
   .adaptive-menu-list {
-    width: 80%;
+    width: 81%;
     height: 100vh;
     margin: 0 0 0 auto;
     padding: 0;
     list-style: none;
     background-color: var(--bg-dark);
+  }
+
+  .adaptive-menu-list a {
+    text-decoration: none;
+    font-family: var(--ff-text);
+    font-size: 35px;
+    font-weight: var(--fw-normal);
+    line-height: 73px;
+    color: var(--white);
+    transition: var(--transition-default);
+  }
+
+  .adaptive-menu-list a:hover {
+    color: var(--gold);
   }
 
 
