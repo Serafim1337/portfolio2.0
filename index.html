@@ -12,7 +12,7 @@
   <header class="header">
     <div class="container header-container">
       <div class="header-logo">
-        <img src="assets/png/logo.png" alt="logo image">
+        <img src="assets/png/logo.png" alt="logo image" class="logo-image">
       </div>
       <div class="header-links">
         <nav>
@@ -27,9 +27,29 @@
         <div class="switch-lang">
           <a href="#">en</a>
           <span>/</span>
-          <a href="#">ru</a>  
+          <a href="#">ru</a>   
+        </div>       
+        <div class="burger-menu" onclick="menuFunction()">
+          <button id="menu-id" class="menu" onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))" aria-label="Main Menu">
+            <svg width="100" height="100" viewBox="0 0 100 100">
+              <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+              <path class="line line2" d="M 20,50 H 80" />
+              <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+            </svg>
+          </button>
         </div>
-      </div>
+      </div> 
+    </div>
+    <div class="adaptive-menu">
+      <nav>
+        <ul class="adaptive-menu-list">
+          <li><a href="#skills-id" onclick="menuLinksFunction();menuFunction()">Skills</a></li>
+          <li><a href="#portfolio-id" onclick="menuLinksFunction();menuFunction()">Portfolio</a></li>
+          <li><a href="#video-id" onclick="menuLinksFunction();menuFunction()">Video</a></li>
+          <li><a href="#price-id" onclick="menuLinksFunction();menuFunction()">Price</a></li>
+          <li><a href="#contacts-id" onclick="menuLinksFunction();menuFunction()">Contacts</a></li> 
+        </ul>
+      </nav>
     </div>
   </header>
   <main class="main">
@@ -37,9 +57,9 @@
       <div class="container hero-container">
         <div class="hero-section-content">
         <h1 class="header-color-white">Alexa Rise</h1>
-        <pre>Save sincere emotions, romantic feelings and
+        <p>Save sincere emotions, romantic feelings and
 happy moments of life together with professional
-photographer Alexa Rise</pre>
+photographer Alexa Rise</p>
         <a href="#" class="hire-link" target="_blank">Hire me</a>
       </div>
       </div>
@@ -47,7 +67,7 @@ photographer Alexa Rise</pre>
 
     <section class="skills-section" id="skills-id">
       <div class="container skills-container">
-        <div class="section-title">
+        <div class="section-title" id="title-id">
           <h2><span class="title-text">Skills</span></h2>
         </div>
         <div class="skills-section-content">
@@ -191,5 +211,6 @@ for video, advertising, portfolio</pre>
       </div>
     </div>
   </footer>
+  <script src="script.js"></script>
 </body>
 </html>
