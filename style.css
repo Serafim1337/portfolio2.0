@@ -200,7 +200,10 @@ h4 {
   margin: 0 9px;
 }
 
+/*! adaptive menu  */
+
 .burger-menu {
+  z-index: 100;
   display: none;
 }
 
@@ -625,10 +628,18 @@ box-sizing: border-box;
     max-width: 768px;
   }
 
+  body.lock {
+    overflow: hidden;
+  }
+
   /*!section titles */
 
   .section-title {
     max-width: 364px;
+  }
+
+  .section-title.hidden {
+    display: none;
   }
   
   /*!header  */
@@ -654,6 +665,8 @@ box-sizing: border-box;
     width: 50px;
     margin-right: 60px;
   }
+
+  /*!burger menu   */
 
   .menu {
     background-color: transparent;
@@ -698,6 +711,33 @@ box-sizing: border-box;
     stroke-width: 5;
   }
 
+  /*! adaptive menu  */
+
+  .adaptive-menu {
+    z-index: 99;
+    top: -2000%;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+   
+    background: rgba(0, 0, 0,0.5);
+    transition: 0.3s ease 0s;
+  }
+  
+  .adaptive-menu.active {
+    top: 0;
+  }
+
+  .adaptive-menu-list {
+    width: 80%;
+    height: 100vh;
+    margin: 0 0 0 auto;
+    padding: 0;
+    list-style: none;
+    background-color: var(--bg-dark);
+  }
+
+
   /*!hero section  */
 
   .hero-section {
@@ -734,6 +774,10 @@ box-sizing: border-box;
 
   .skills-section-content {
     gap: 30px 29px;
+  }
+
+  .skills-section-content.menu-view-adaption {
+    margin: 220px 20px 0px 20px;
   }
 
   .skill-card h4 {
