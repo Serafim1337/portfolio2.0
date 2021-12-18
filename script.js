@@ -1,5 +1,6 @@
 function menuFunction() {
   document.querySelector('.adaptive-menu').classList.toggle('active');
+  document.querySelector('.adaptive-menu-list').classList.toggle('active');
   document.querySelector('body').classList.toggle('lock');
   let element = document.querySelector('#title-id');
   if(element.classList.contains('hidden')) {
