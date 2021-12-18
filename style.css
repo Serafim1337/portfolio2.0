@@ -224,9 +224,10 @@ h4 {
 
 .hero-section-content {
   margin-left: 80px;
+  max-width: 470px;
 }
 
-.hero-section-content pre {
+.hero-section-content p {
   font-family: var(--ff-text);
   font-weight: var(--fw-normal);
   font-size: var(--fs-medium);
@@ -609,6 +610,7 @@ box-sizing: border-box;
 @media (max-width: 768px) {
 
   /*!root  */
+
   :root{
     --fs-header-default: 32px;
   }
@@ -651,7 +653,7 @@ box-sizing: border-box;
   }
 
   .hero-section-content {
-    margin-left: 20px;
+    margin: 0 20px;
   }
 
   .hero-section-content pre {
@@ -768,5 +770,50 @@ box-sizing: border-box;
   
   .elem1 {
     margin: 0;
+  }
+}
+
+@media (max-width: 480px) {
+
+  /*!photos section  */
+
+  .button-block {
+    margin-bottom: 130px;
+  }
+
+  .photos img {
+    width: 100%;
+    height: auto;
+  }
+
+  /*!contacts section */
+  .contacts-section-content {
+    margin: 0 20px;
+    flex-grow: 1;
+  }
+
+  .contacts-input, .contacts-textarea {
+    width: 100%;
+  }
+
+}
+
+@media (max-width: 400px) {
+
+   /*!section titles */
+
+   .section-title {
+    max-width: 264px;
+  }
+
+  /*!hero section  */
+
+  .hero-section-content {
+    text-align: center;
+  }
+
+  .hire-link {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
