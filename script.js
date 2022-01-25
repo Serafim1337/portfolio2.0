@@ -19,4 +19,15 @@ function titleHideFunction() {
 function menuLinksFunction() {
   let element = document.querySelector('#menu-id');
   element.classList.toggle('opened');
+  
+}
+
+document.querySelector('#menu-bg').addEventListener('click', bgHandler);
+
+function bgHandler (event) {
+  if(event.target === document.querySelector('#adaptive-menu-nav')) {
+    menuFunction();
+    document.querySelector('#menu-id').classList.toggle('opened');
+    document.querySelector('#menu-id').setAttribute('area-expanded',false);
+  }
 }
